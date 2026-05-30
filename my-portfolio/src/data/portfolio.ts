@@ -9,7 +9,7 @@ export interface Profile{
     bio: string //自己紹介文.
     motto: string //モットー、座右の銘.
     avatar: string //顔写真の画像パス.
-    kinks:{
+    Links:{
         github: string //githubのURL.
         twitter: string | null //X.
         email: string //メールアドレス.
@@ -22,7 +22,7 @@ export interface Skill{
     version: string | null //バージョン情報(null許容)
     level: number //スキルレベル.
     category: string //カテゴリ.
-    capabilities : string //できること.
+    capabilities : string[] //できること.
     note: string | null //実装経験.
 }
 
@@ -52,7 +52,7 @@ export interface Work{
     techPoints: string | null //技術ポイント.
     designNotes: string | null //設計上の工夫.
     implementationTheme: string | null //実装開設テーマ.
-    troublessoting: string | null //詰まった問題と解決策.
+    troubleshooting: string | null //詰まった問題と解決策.
     performance: string | null //パフォーマンス改善の工夫.
 }
 
@@ -62,7 +62,7 @@ export interface GameJam{
     date: string //日時.
     theme: string //情報.
     description: string //作品詳細.
-    platform: string //プラットフォーム.
+    platform: string[] //プラットフォーム.
     role: string //担当箇所.
     team: string //チーム情報.
     result: string | null //結果.
@@ -89,16 +89,16 @@ export interface TimelineItem{
 
 
 export const profile: Profile = {
-    name: "",
-    nameEn: "",
+    name: "林 優斗",
+    nameEn: "HAYASHI YUTO",
     role: "",
-    school: "",
+    school: "京都デザイン&テクノロジー専門学校",
     department: "",
-    graduationYear: "",
+    graduationYear: "2028年",
     bio: "",
     motto: "",
     avatar: "",
-    kinks: {
+    Links: {
         github: "",
         twitter: null,
         email: ""
@@ -111,7 +111,7 @@ export const skills: Skill[] = [
         version: null,
         level: 0,
         category: "",
-        capabilities: "",
+        capabilities: [],
         note: null
     }, 
 ]
@@ -137,7 +137,7 @@ export const works: Work[] =[
         techPoints: null,
         designNotes: null,
         implementationTheme: null,
-        troublessoting: null,
+        troubleshooting: null,
         performance: null
     }, //配列ごとに作品情報を作ってく.
 ]
@@ -148,7 +148,7 @@ export const gameJames: GameJam[]=[
         date: "",
         theme: "",
         description: "",
-        platform: "",
+        platform: [],
         role: "",
         team: "",
         result: null,
