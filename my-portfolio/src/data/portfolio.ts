@@ -9,7 +9,7 @@ export interface Profile{
     bio: string //自己紹介文.
     motto: string //モットー、座右の銘.
     avatar: string //顔写真の画像パス.
-    Links:{
+    links:{
         github: string //githubのURL.
         twitter: string | null //X.
         email: string //メールアドレス.
@@ -75,8 +75,8 @@ export type CertStatus = "取得済み" | "受験予定" | "取得予定" | "学
 //資格情報
 export interface Certification{
     name: string //資格名.
-    data: string //日時.
-    caategory: string //カテゴリ.
+    date: string //日時.
+    category: string //カテゴリ.
     score: string | null //スコア.
     status: CertStatus //ステータス.
 }
@@ -95,13 +95,13 @@ export const profile: Profile = {
     school: "京都デザイン&テクノロジー専門学校",
     department: "",
     graduationYear: "2028年",
-    bio: "",
-    motto: "",
+    bio: "Unityを用いたゲーム制作を通して、操作感や遊びやすさを意識した開発に取り組んでいます。例えば、アイテム残数をUIで表示して状況把握をしやすくしたり、UI配置や情報量を調整して直感的に操作できるインターフェースを意識しました。また、Inspector上でパラメータを調整できる設計にすることで、仕様変更やバランス調整を行いやすい環境づくりにも取り組んでいます。今後は、プレイヤーに楽しさを届けられるゲームプログラマーを目指しています。",
+    motto: "好きを仕事に",
     avatar: "",
-    Links: {
-        github: "",
+    links: {
+        github: "https://github.com/Yuto-884",
         twitter: null,
-        email: ""
+        email: "ha03ya28@gmail.com"
     }
 }
 
@@ -157,11 +157,11 @@ export const gameJames: GameJam[]=[
     }
 ]
 
-export const Certification: Certification[]=[
+export const certifications: Certification[]=[
     {
         name: "",
-        data: "",
-        caategory: "",
+        date: "",
+        category: "",
         score: null,
         status: "取得済み"
     }

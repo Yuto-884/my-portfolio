@@ -9,7 +9,13 @@ interface Props {
 }
 
 export default function Header({ theme, onThemeToggle }: Props) {
-  const navItems = [{ label: "About", hash: "about" }];
+  const navItems = [
+    { label: "About", hash: "about" },
+    { label: "Skils", hash: "skils" },
+    { label: "Works", hash: "works" },
+    { label: "Certs", hash: "certifications" },
+    { label: "Contact", hash: "contact" },
+  ];
 
   return (
     <header className="header">
@@ -38,7 +44,7 @@ export default function Header({ theme, onThemeToggle }: Props) {
           onClick={onThemeToggle}
           aria-label={theme == 'dark' ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {theme === 'dark' ? 'FaSun' : 'FaMoon'}
           </button>
           
         </div>

@@ -58,16 +58,13 @@ export default function Skills() {
         <h2 className="section-title">
           <span>Skills</span>
         </h2>
-
         <p className="section-sub">技術スタック</p>
-
         <div className="skills-categories">
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`skill-filter-btn ${
-                activeCategory === cat ? "active" : ""
-              }`}
+              className={`skill-filter-btn 
+                            ${activeCategory === cat ? "active" : "" }`}
               onClick={() => setActiveCategory(cat)}
             >
               {CATEGORY_LABELS[cat] ?? cat}
